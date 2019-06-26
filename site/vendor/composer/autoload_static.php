@@ -34,6 +34,11 @@ class ComposerStaticInitdf6e65926be927480785a96f047e14d7
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
+        'M' => 
+        array (
+            'Model\\' => 6,
+            'Middleware\\' => 11,
+        ),
         'K' => 
         array (
             'Kint\\' => 5,
@@ -45,6 +50,10 @@ class ComposerStaticInitdf6e65926be927480785a96f047e14d7
         'F' => 
         array (
             'FastRoute\\' => 10,
+        ),
+        'C' => 
+        array (
+            'Controller\\' => 11,
         ),
     );
 
@@ -81,6 +90,14 @@ class ComposerStaticInitdf6e65926be927480785a96f047e14d7
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/model',
+        ),
+        'Middleware\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/middleware',
+        ),
         'Kint\\' => 
         array (
             0 => __DIR__ . '/..' . '/kint-php/kint/src',
@@ -92,6 +109,10 @@ class ComposerStaticInitdf6e65926be927480785a96f047e14d7
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/controller',
         ),
     );
 

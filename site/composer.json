@@ -4,5 +4,12 @@
     "slim/twig-view": "^2.4.0",
     "kint-php/kint": "^3.1",
     "cebe/markdown": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Model\\": "app/model/",
+      "Controller\\": "app/controller/",
+      "Middleware\\": "app/middleware/"
+    }
   }
 }
