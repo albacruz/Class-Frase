@@ -27,3 +27,7 @@ Hola
 hola3
 hola20
 funcionan_todas_las_funciones
+funcionan_todas_las_funciones
+nueva_frase
+si_funciona
+me_funciona

@@ -25,5 +25,13 @@ class Frase {
     public function addPhrase ($file, $newPhrase) {
         file_put_contents($file, "\n" . $newPhrase, FILE_APPEND);
     }
+
+    public function getArray () {
+        return $this->arrayPhrase;
+    }
+
+    public function getLength () {
+        return $this->length;
+    }
 }
 ?>
