@@ -32,5 +32,5 @@ $app->get('/fraseAleatoria', function() use ($frase){
     };
   });
 
-    $app->get('/controller', Home_Controller::Class . ':getHola')
+    $app->get('/controller', Home_Controller::Class . ':getHola');
 ?>
