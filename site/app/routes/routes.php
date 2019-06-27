@@ -1,15 +1,10 @@
 <?php
 
-require __DIR__ . '/../../public/classfrase.php';
-
-$file = 'frases.txt';
-$frase = new Frase($file);
-
-$app->get('/funciona', function(){
+/*$app->get('/funciona', function(){
     echo "Hola";
 });
 
-$app->get('/fraseAleatoria', function() use ($frase){
+ $app->get('/fraseAleatoria', function() use ($frase){
     echo $frase->getRandomPhrase();
   });
   $app->get('/frase/{numero}', function($request, $response, $args) use ($frase){
@@ -30,7 +25,14 @@ $app->get('/fraseAleatoria', function() use ($frase){
     for ($i=0; $i < $length; $i++) {
         echo $i+1 . ". " . $phraseArray[$i] . "<br>";
     };
-  });
+  }); */
 
     $app->get('/controller', Home_Controller::Class . ':getHola');
+    $app->get('/controller2', Frase_Controller::Class . ':getRandomPhrase');
+    $app->get('/controller3/{numero}', Frase_Controller::Class . ':getPhrase');
+    $app->get('/controller4/{frase}', Frase_Controller::Class . ':addPhrase');
+    $app->get('/controller6', Frase_Controller::Class . ':showAll');
+
+
+    $app->get('/controller5', Frase_Controller::Class . ':getTotal');
 ?>

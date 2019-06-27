@@ -32,3 +32,5 @@ nueva_frase
 si_funciona
 me_funciona
 me_funciona2
+esta es la frase que verifica que mi controller funciona
+nueva_frase
