@@ -1,5 +1,7 @@
 <?php
 
+use Psr\Http\Message\ServerRequestInterface as Request,
+    Psr\Http\Message\ResponseInterface as Response;
     /* $app->get('/controller', Pokemon_Controller::Class . ':getHola');
     $app->get('/controller2', Pokemon_Controller::Class . ':getRandomPokemon');
     $app->get('/controller3', Pokemon_Controller::Class . ':getTotal');
@@ -17,4 +19,17 @@
     $app -> get('/home/middleware/yes', function () { return 'Hello'; }) -> add(Home_Middleware::Class . ':getPath');
     $app -> get('/home/middleware/json', function () { return 'Hello'; }) -> add(Home_Middleware::Class . ':getJson');
 
-?>
+    $app -> get('/pokemon', function (Request $Request, Response $Response){
+        $aData = $this->db->table('pokemons')->get();
+        var_dump($aData);
+    });
+
+    $app -> get('/pokemon2', function (Request $Request, Response $Response){
+        $aData = $this->db->table('pokemons')->pluck('id', 'name');
+        var_dump($aData);
+    });
+
+    $app -> get('/pokemon3', function (Request $Request, Response $Response){
+        $aData = $this->db->table('pokemons')->where('id','<', 15)->orderBy('name')->get();
+        echo $aData;
+    });

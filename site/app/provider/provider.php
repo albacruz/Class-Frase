@@ -14,6 +14,23 @@ $aContainer['view'] = function ($cContainer) {
     return $vViews;
 };
 
+$aContainer['db'] = function ($cContainer) {
+
+    $mManager = new \Illuminate\Database\Capsule\Manager;
+  
+    $aConfig = $cContainer -> get('config')['db'];
+  
+    //if ($aConfig['driver'] != 'mysql') return $aConfig[$aConfig['driver']];
+  
+    $mManager -> addConnection($aConfig['mysql']);
+  
+    $mManager -> setAsGlobal();
+    $mManager -> bootEloquent();
+  
+    return $mManager;
+  
+  };
+
 $aContainer['Home_Controller'] = function ($cContainer) { return new \Controller\Home_Controller($cContainer);};
 $aContainer['Frase_Controller'] = function ($cContainer) { return new \Controller\Frase_Controller($cContainer);};
 $aContainer['Pokemon_Controller'] = function ($cContainer) { return new \Controller\Pokemon_Controller($cContainer);};
