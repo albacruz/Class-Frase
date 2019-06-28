@@ -1,5 +1,5 @@
 # Instalamos dependencias de Composer
-composer install
+#composer install
 
 # Arrancamos servicios de PHP y nginx
 service php7.3-fpm start

@@ -17,5 +17,6 @@ $aContainer['view'] = function ($cContainer) {
 $aContainer['Home_Controller'] = function ($cContainer) { return new \Controller\Home_Controller($cContainer);};
 $aContainer['Frase_Controller'] = function ($cContainer) { return new \Controller\Frase_Controller($cContainer);};
 $aContainer['Pokemon_Controller'] = function ($cContainer) { return new \Controller\Pokemon_Controller($cContainer);};
+$aContainer['Home_Middleware'] = function ($cContainer) { return new \Middleware\Home_Middleware($cContainer);};
 
 
