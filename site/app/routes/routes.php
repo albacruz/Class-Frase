@@ -1,38 +1,15 @@
 <?php
 
-/*$app->get('/funciona', function(){
-    echo "Hola";
-});
-
- $app->get('/fraseAleatoria', function() use ($frase){
-    echo $frase->getRandomPhrase();
-  });
-  $app->get('/frase/{numero}', function($request, $response, $args) use ($frase){
-    echo $frase->getPhrase($args['numero']);
-  });
-
-  $app->get('/addFrase/{frase}', function($request, $response, $args) use ($frase, $file){
-    $frase->addPhrase($file, $args['frase']);
-    echo "Se añadió la frase " . $args['frase'] . " al fichero " . $file . " .";
-  });
-
-  $app->get('/showAll', function() use ($frase, $file){
-    $phraseArray = $frase->getArray();
-    $length = $frase->getLength();
-
-    echo "<h1> Fichero " . $file . "</h1>";
-
-    for ($i=0; $i < $length; $i++) {
-        echo $i+1 . ". " . $phraseArray[$i] . "<br>";
-    };
-  }); */
-
-    $app->get('/controller', Home_Controller::Class . ':getHola');
-    $app->get('/controller2', Frase_Controller::Class . ':getRandomPhrase');
-    $app->get('/controller3/{numero}', Frase_Controller::Class . ':getPhrase');
-    $app->get('/controller4/{frase}', Frase_Controller::Class . ':addPhrase');
-    $app->get('/controller6', Frase_Controller::Class . ':showAll');
-
-
-    $app->get('/controller5', Frase_Controller::Class . ':getTotal');
+    $app->get('/controller', Pokemon_Controller::Class . ':getHola');
+    $app->get('/controller2', Pokemon_Controller::Class . ':getRandomPokemon');
+    $app->get('/controller3', Pokemon_Controller::Class . ':getTotal');
+    $app->get('/controller4/{numero}', Pokemon_Controller::Class . ':getPokemon');
+    $app->get('/controller6', Pokemon_Controller::Class . ':showAll');
+    $app->get('/controller5', Home_Controller::Class . ':getHola');
+    $app->get('/controller7/{attack}', Pokemon_Controller::Class . ':showAttack');
+    $app->get('/controller8/{defense}', Pokemon_Controller::Class . ':showDefense');
+    $app->get('/controller9/{speed}', Pokemon_Controller::Class . ':showSpeed');
+    $app->get('/controller10/{hp}', Pokemon_Controller::Class . ':showHp');
+    $app->get('/controller11/{special}', Pokemon_Controller::Class . ':showSpecial');
+    $app->get('/controller12/{bs}', Pokemon_Controller::Class . ':showBaseStats');
 ?>

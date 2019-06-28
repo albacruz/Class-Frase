@@ -15,6 +15,7 @@ class Frase_Controller {
         $this-> cContainer = $cContainer;
         $this->arrayPhrase = file('frases.txt');
         $this->length = count($this->arrayPhrase);
+
     }
 
     public function getRandomPhrase (Request $request, Response $response) {

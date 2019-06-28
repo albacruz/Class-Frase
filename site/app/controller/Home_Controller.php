@@ -15,7 +15,8 @@ class Home_Controller {
     }
 
     public function getHola (Request $Request, Response $Response) {
-        return "Hola";
+        $array = ['hola'];
+        return $this->cContainer->view->render($Response, 'index.twig', $array);
     }
 }
 
